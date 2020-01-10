@@ -11,23 +11,15 @@ def df_cols():
     return common_cols()+models()
 
 def load_all():
-    pred_cnn_l4 = np.load("data/cnn_4.pkl", allow_pickle=True)
+    pred_cnn_l4 = np.load("data/cnn_predict_4.pkl", allow_pickle=True)
     pred_lstm_l4 = np.load("data/lstm_4.pickle", allow_pickle=True)
-    pred_fasttext_l4 = np.load("data/fasttext_4.pkl", allow_pickle=True)
-    pred_fasttext_pretrained_l4 = np.load("data/fasttext_pre_4.pkl", allow_pickle=True)
+    pred_fasttext_l4 = np.load("data/fasttext_predict_4.pkl", allow_pickle=True)
+    pred_fasttext_pretrained_l4 = np.load("data/fasttext_pre_predict_4.pkl", allow_pickle=True)
 
-    pred_cnn_l3 = np.load("data/cnn_3.pkl", allow_pickle=True)
+    pred_cnn_l3 = np.load("data/cnn_predict_3.pkl", allow_pickle=True)
     pred_lstm_l3 = np.load("data/lstm_3.pickle", allow_pickle=True)
-    pred_fasttext_l3 = np.load("data/fasttext_3.pkl", allow_pickle=True)
-    pred_fasttext_pretrained_l3 = np.load("data/fasttext_pre_3.pkl", allow_pickle=True)
-    
-    pred_lstm_l4 = pred_cnn_l4
-    pred_fasttext_l4 = pred_cnn_l4
-    pred_fasttext_pretrained_l4 = pred_cnn_l4
-
-    pred_lstm_l3 = pred_cnn_l4
-    pred_fasttext_l3 = pred_cnn_l4
-    pred_fasttext_pretrained_l3 = pred_cnn_l4
+    pred_fasttext_l3 = np.load("data/fasttext_predict_3.pkl", allow_pickle=True)
+    pred_fasttext_pretrained_l3 = np.load("data/fasttext_pre_predict_3.pkl", allow_pickle=True)
     
     return pred_cnn_l4,pred_lstm_l4,pred_fasttext_l4,pred_fasttext_pretrained_l4,pred_cnn_l3,pred_lstm_l3,pred_fasttext_l3,pred_fasttext_pretrained_l3
 
